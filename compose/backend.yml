@@ -1,0 +1,28 @@
+services:
+  models:
+    image: tensorflow/serving
+    container_name: models
+    environment:
+      MODEL_NAME: "universal-encoder"
+    networks:
+      - backend-network
+    volumes:
+      - ../models/universal-encoder:/models/universal-encoder
+
+  backend:
+    image: edoriggio/api-scout:dev
+    container_name: backend
+    environment:
+      GIN_MODE: "release"
+      MODELS_HOST: "models"
+    networks:
+      - backend-network
+    ports:
+      - "8080:8080"
+    volumes:
+      - ../config:/backend/config
+
+networks:
+  backend-network:
+    name: backend-network
+    external: true

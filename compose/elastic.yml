@@ -1,0 +1,21 @@
+services:
+  es:
+    container_name: es
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.12.2
+    environment:
+      - node.name=es
+      - cluster.initial_master_nodes=es
+      - ELASTIC_PASSWORD=$ELASTIC_PASSWORD
+      - "ES_JAVA_OPTS=-Xms6000m -Xmx6000m"
+      - xpack.security.enabled=false
+    volumes:
+      - data:/usr/share/elasticsearch/data
+    ports:
+      - 9200:9200
+    networks:
+      - backend-network
+
+volumes: { "data" }
+networks:
+  backend-network:
+    external: true

@@ -1,0 +1,8 @@
+*.env
+!.template.env
+*.config.yml
+!template.config.yml
+models/**
+!.gitkeep
+.DS_Store
+.idea

@@ -41,5 +41,8 @@ If the `elastic` container crashed unexpectedly with a 137 code, it could be tha
 - "ES_JAVA_OPTS=-Xms6000m -Xmx6000m"
 ```
 
-## References
-[^1] D. Cer, Y. Yang, S.-y. Kong, N. Hua, N. Limtiaco, R. St. John, N. Constant, M. Guajardo-Cespedes, S. Yuan, C. Tar, Y.-H. Sung, B. Strope, and R. Kurzweil, “Universal Sentence Encoder,” Mar. 2018. Publication Title: arXiv e-prints ADS Bibcode: 2018arXiv180311175C.
+## Diagram
+
+<div align="center"><img src="https://raw.githubusercontent.com/APIScout/report/main/assets/png/deployment/architecture.png"/></div>
+
+[^1]: D. Cer, Y. Yang, S.-y. Kong, N. Hua, N. Limtiaco, R. St. John, N. Constant, M. Guajardo-Cespedes, S. Yuan, C. Tar, Y.-H. Sung, B. Strope, and R. Kurzweil, “Universal Sentence Encoder,” Mar. 2018. Publication Title: arXiv e-prints ADS Bibcode: 2018arXiv180311175C.
